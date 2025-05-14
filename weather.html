@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>即時天氣查詢</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="./index.html">關於我</a></li>
+        <li><a href="./todolist.html">代辦清單</a></li>
+        <li><a class="active" href="#">即時天氣</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <h1>天氣查詢</h1>
+
+      <div class="alert">
+        ⚠️ 本網站為展示用，API 金鑰已公開，請勿用於正式專案。<br />
+      </div>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="請輸入城市名稱(英文地名)"
+        />
+        <button id="searchBtn">查詢</button>
+      </div>
+      <div class="resourse">
+        資料來源：<a href="https://openweathermap.org" target="_blank"
+          >OpenWeatherMap</a
+        >
+      </div>
+      <div class="weather hidden"></div>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./weather.js"></script>
+  </body>
+</html>

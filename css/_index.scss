@@ -1,0 +1,42 @@
+.about-section {
+  padding: 40px 80px;
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #4e4e4e;
+  }
+
+  .content-flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .img-block {
+    flex: 0 1 350px;
+    text-align: center;
+
+    h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #6a5c48;
+      font-weight: 600;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+  }
+
+  .text-block {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+}

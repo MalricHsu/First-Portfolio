@@ -1,0 +1,42 @@
+// 導航欄樣式
+nav {
+  background-color: rgba(224, 218, 208, 0.8); // 背景色帶金霧感
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  ul {
+    display: flex;
+    margin-left: 100px;
+    list-style: none;
+    padding: 0; // 移除預設 padding
+
+    li {
+      margin: 0; // 避免預設 margin
+
+      a {
+        display: block;
+        padding: 20px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #4a4a4a;
+        transition: color 0.3s ease, background-color 0.3s ease;
+
+        &.active {
+          color: #d4b69b;
+          font-weight: bold;
+        }
+
+        &:hover {
+          color: #d4a373;
+        }
+      }
+    }
+  }
+}
+
+// 重置一些基本樣式，確保一致性
