@@ -1,0 +1,170 @@
+.cart-page {
+  padding: 2rem;
+  background-color: #fafafa;
+  min-height: 100vh;
+  color: #3a3a3a;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #5a4d3a;
+    letter-spacing: 0.05em;
+  }
+
+  .cart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(90, 77, 58, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e2e2e2;
+
+      .titleproduct {
+        font-size: 18px;
+        color: #444;
+        font-weight: 500;
+      }
+
+      .quantity {
+        font-size: 20px;
+        color: #444;
+        font-weight: 500;
+      }
+
+      .quantity-control {
+        flex: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: center; // 調整間距，讓按鈕跟數字更靠近
+
+        button {
+          background: #d9d9d9;
+          border: none;
+          border-radius: 8px;
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.3s ease;
+
+          i {
+            font-size: 16px; // 調整圖標大小
+            color: #5a4d3a;
+            margin: 0;
+          }
+
+          &:hover {
+            background-color: #a58f5e;
+
+            i {
+              color: #fff;
+            }
+          }
+        }
+
+        .quantity {
+          font-weight: 600;
+          font-size: 1.3rem; // 放大數字
+          min-width: 28px;
+          text-align: center;
+          color: #6b5c47;
+          margin: 0 4px; // 縮小左右間距
+        }
+      }
+
+      .totals {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      span:last-child {
+        flex: 1;
+        text-align: right;
+        font-weight: 700; // 加粗價格
+        font-size: 1.3rem; // 放大價格字體
+        color: #a94442;
+        margin-left: 10px;
+      }
+
+      .remove-btn {
+        flex: 0.4;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s ease;
+
+        i {
+          font-size: 20px;
+          color: #b3392b; // 調深紅色，垃圾桶顏色不那麼刺眼
+        }
+
+        &:hover i {
+          color: #7a1c15;
+        }
+      }
+    }
+  }
+
+  .cart-summary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #4e4e4e;
+
+    .total-price {
+      color: #a94442;
+    }
+
+    .checkout-btn {
+      background-color: #a58f5e;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 3px 8px rgba(165, 143, 94, 0.4);
+
+      &:hover {
+        background-color: #8c7744;
+        box-shadow: 0 6px 14px rgba(140, 119, 68, 0.7);
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        color: #777;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+    }
+  }
+}
