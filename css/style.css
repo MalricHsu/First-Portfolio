@@ -133,10 +133,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 nav {
   background-color: rgba(224, 218, 208, 0.8);
   -webkit-backdrop-filter: blur(10px);
@@ -865,4 +861,8 @@ nav .nav-link li a:hover {
   color: #777;
   cursor: not-allowed;
   box-shadow: none;
+}
+
+body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */

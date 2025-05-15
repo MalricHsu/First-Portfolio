@@ -1,10 +1,11 @@
 @import "_reset.scss";
-body {
-  overflow-x: hidden;
-}
+
 @import "_nav.scss";
 @import "_index.scss";
 @import "_todolist.scss";
 @import "_weather.scss";
 @import "_goods.scss";
 @import "_cart.scss";
+body {
+  overflow-x: hidden;
+}
