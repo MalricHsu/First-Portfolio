@@ -1,4 +1,7 @@
 @import "_reset.scss";
+body {
+  max-width: 1200px;
+}
 @import "_nav.scss";
 @import "_index.scss";
 @import "_todolist.scss";

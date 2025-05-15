@@ -1,6 +1,7 @@
 .home {
   background-color: #ece9e0;
   .main {
+    max-width: 1200px;
     margin: 0 auto;
     h2 {
       padding: 40px;
@@ -143,5 +144,14 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .todogroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
