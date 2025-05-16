@@ -1,14 +1,82 @@
 .about-section {
   max-width: 1200px;
+  margin: 0 auto;
   padding: 40px 80px;
 
-  .h2-1 {
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #8f8678;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6a7485;
+  }
+
+  .intro1 {
+    max-width: 1200px;
+    margin-bottom: 20px;
+    p {
+      padding: 0px 10px;
+      line-height: 1.5;
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      color: #5a5562; // 藍紫灰
+    }
+    .intro-img {
+      display: flex;
+      ul {
+        padding: 0;
+        margin-bottom: 20px;
+
+        li {
+          padding: 10px;
+          font-size: 18px;
+
+          a {
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            color: #5c5047;
+            text-decoration: none;
+            padding: 8px 12px 8px 0px;
+            border-radius: 6px; /* 可選，讓背景有圓角 */
+            transition: background-color 0.2s ease, color 0.2s ease;
+          }
+
+          a:hover {
+            background-color: #f0eae5; /* 自訂一個淡色背景 */
+            color: #3e362f; /* 字色也可稍微變深 */
+          }
+        }
+      }
+      img {
+        display: block;
+        margin: auto;
+        width: 50%;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .h2-1,
+  .h2-2,
+  .h2-3 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 24px;
     padding: 15px;
     color: #4e4e4e;
     background-color: #f3efe6;
+  }
+
+  .h2-3 {
+    margin: 30px 0px; // 特別調整h2-3的margin
   }
 
   .content-flex {
@@ -42,136 +110,236 @@
     line-height: 1.5;
     color: #333;
   }
-  .h2-2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin: 30px 0px;
-    padding: 15px;
+
+  .tabs {
+    max-width: 1200px;
+    display: flex;
+    margin: 40px 0px 10px 0px;
+  }
+
+  .tab-button {
+    flex: 1;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #f2efe6; // 淺米色
     color: #4e4e4e;
-    background-color: #f3efe6;
+    border: 1px solid #d8cfc0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #e6ddc8; // 淺棕色 hover 效果
+    }
+  }
+
+  .tab-button.live {
+    background-color: #bfa46f; // 主色（焦糖棕）
+    color: white;
+    border-color: #bfa46f;
+  }
+
+  .tab-content {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #d8cfc0;
+    background-color: #fffdf9;
+    color: #4e4e4e;
+    line-height: 1.5;
+    border-radius: 4px;
+    .part {
+      h4 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      h5 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 5px 0;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .tab-content.live {
+    display: block;
   }
 }
 
-.tabs {
-  max-width: 1200px;
-  display: flex;
-  margin: 40px 0px 10px 0px;
-}
-
-.tab-button {
-  flex: 1;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
-  background-color: #f2efe6; // 淺米色
-  color: #4e4e4e;
-  border: 1px solid #d8cfc0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:hover {
-    background-color: #e6ddc8; // 淺棕色 hover 效果
-  }
-}
-
-.tab-button.live {
-  background-color: #bfa46f; // 主色（焦糖棕）
-  color: white;
-  border-color: #bfa46f;
-}
-
-.tab-content {
-  display: none;
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #d8cfc0;
-  background-color: #fffdf9;
-  color: #4e4e4e;
-  line-height: 1.5;
-  border-radius: 4px;
-  font-size: 18px;
-}
-
-.tab-content.live {
-  display: block;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
+// RWD
+@media (max-width: 1024px) {
   .about-section {
     padding: 20px 15px;
+    box-sizing: border-box;
 
-    .h2-1,
-    .h2-2 {
-      font-size: 24px;
-      padding: 10px;
+    h1 {
+      font-size: 26px;
       margin-bottom: 20px;
+    }
+
+    .intro1 {
+      p {
+        width: 90%;
+        font-size: 16px;
+        padding: 0 5px;
+      }
+
+      .intro-img {
+        flex-direction: column;
+
+        ul {
+          margin-bottom: 15px;
+
+          li {
+            padding: 8px 5px;
+            font-size: 16px;
+
+            strong {
+              font-size: 18px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .h2-1,
+    .h2-2,
+    .h2-3 {
+      font-size: 22px;
+      padding: 10px;
+      margin-bottom: 16px;
+    }
+
+    .h2-3 {
+      margin: 20px 0;
     }
 
     .content-flex {
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
     }
 
-    h3 {
-      font-size: 22px;
-    }
     .img-block {
-      width: 100%;
+      width: 90%;
       margin-bottom: 15px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
     }
 
     .text-block {
-      width: 90%;
-      font-size: 18px;
-    }
-  }
-}
-@media (max-width: 767.98px) {
-  .about-section {
-    padding: 20px 15px;
-
-    .h2-1,
-    .h2-2 {
-      font-size: 22px;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-
-    .content-flex {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    h3 {
-      font-size: 20px;
-    }
-    .img-block {
       width: 100%;
-      margin-bottom: 15px;
-    }
-
-    .text-block {
-      width: 90%;
       font-size: 16px;
     }
   }
 
-  //標籤
-  .tabs {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
+  @media (max-width: 767.98px) {
+    .about-section {
+      padding: 20px 15px;
+      box-sizing: border-box;
 
-  .tab-button {
-    flex: 1 1 calc(50% - 5px);
-    box-sizing: border-box;
-    padding: 8px 15px;
-    font-size: 16px;
-    text-align: center;
-  }
+      h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
 
-  .tab-content {
-    padding: 15px;
-    font-size: 16px;
+      .intro1 {
+        p {
+          width: 90%;
+          font-size: 16px;
+          padding: 0 5px;
+        }
+
+        .intro-img {
+          flex-direction: column;
+
+          ul {
+            margin-bottom: 15px;
+
+            li {
+              padding: 8px 5px;
+              font-size: 16px;
+              margin-bottom: 5px;
+
+              strong {
+                font-size: 18px;
+                margin-bottom: 10px;
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .h2-1,
+      .h2-2,
+      .h2-3 {
+        font-size: 22px;
+        padding: 10px;
+        margin-bottom: 16px;
+      }
+
+      .h2-3 {
+        margin: 20px 0;
+      }
+
+      .content-flex {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .img-block {
+        width: 90%;
+        margin-bottom: 15px;
+
+        h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .text-block {
+        width: 100%;
+        font-size: 16px;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 25px 0 10px 0;
+      }
+
+      .tab-button {
+        flex: 1 1 calc(50% - 5px);
+        box-sizing: border-box;
+        padding: 8px 10px;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      .tab-content {
+        padding: 15px;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    }
   }
 }

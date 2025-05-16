@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -242,15 +243,76 @@ nav .nav-link li a:hover {
 }
 .about-section {
   max-width: 1200px;
+  margin: 0 auto;
   padding: 40px 80px;
 }
-.about-section .h2-1 {
+.about-section h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #8f8678;
+}
+.about-section p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6a7485;
+}
+.about-section .intro1 {
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+.about-section .intro1 p {
+  padding: 0px 10px;
+  line-height: 1.5;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #5a5562;
+}
+.about-section .intro1 .intro-img {
+  display: flex;
+}
+.about-section .intro1 .intro-img ul {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.about-section .intro1 .intro-img ul li {
+  padding: 10px;
+  font-size: 18px;
+}
+.about-section .intro1 .intro-img ul li a {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #5c5047;
+  text-decoration: none;
+  padding: 8px 12px 8px 0px;
+  border-radius: 6px; /* 可選，讓背景有圓角 */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.about-section .intro1 .intro-img ul li a:hover {
+  background-color: #f0eae5; /* 自訂一個淡色背景 */
+  color: #3e362f; /* 字色也可稍微變深 */
+}
+.about-section .intro1 .intro-img img {
+  display: block;
+  margin: auto;
+  width: 50%;
+  border-radius: 10px;
+}
+.about-section .h2-1,
+.about-section .h2-2,
+.about-section .h2-3 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 24px;
   padding: 15px;
   color: #4e4e4e;
   background-color: #f3efe6;
+}
+.about-section .h2-3 {
+  margin: 30px 0px;
 }
 .about-section .content-flex {
   display: flex;
@@ -279,22 +341,12 @@ nav .nav-link li a:hover {
   line-height: 1.5;
   color: #333;
 }
-.about-section .h2-2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 30px 0px;
-  padding: 15px;
-  color: #4e4e4e;
-  background-color: #f3efe6;
-}
-
-.tabs {
+.about-section .tabs {
   max-width: 1200px;
   display: flex;
   margin: 40px 0px 10px 0px;
 }
-
-.tab-button {
+.about-section .tab-button {
   flex: 1;
   padding: 10px 20px;
   cursor: pointer;
@@ -305,17 +357,15 @@ nav .nav-link li a:hover {
   border: 1px solid #d8cfc0;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.tab-button:hover {
+.about-section .tab-button:hover {
   background-color: #e6ddc8;
 }
-
-.tab-button.live {
+.about-section .tab-button.live {
   background-color: #bfa46f;
   color: white;
   border-color: #bfa46f;
 }
-
-.tab-content {
+.about-section .tab-content {
   display: none;
   margin-top: 20px;
   padding: 20px;
@@ -324,78 +374,161 @@ nav .nav-link li a:hover {
   color: #4e4e4e;
   line-height: 1.5;
   border-radius: 4px;
-  font-size: 18px;
 }
-
-.tab-content.live {
+.about-section .tab-content .part h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-section .tab-content .part h5 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-section .tab-content .part p {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.about-section .tab-content.live {
   display: block;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-section {
     padding: 20px 15px;
+    box-sizing: border-box;
   }
-  .about-section .h2-1,
-  .about-section .h2-2 {
-    font-size: 24px;
-    padding: 10px;
+  .about-section h1 {
+    font-size: 26px;
     margin-bottom: 20px;
   }
-  .about-section .content-flex {
+  .about-section .intro1 p {
+    width: 90%;
+    font-size: 16px;
+    padding: 0 5px;
+  }
+  .about-section .intro1 .intro-img {
     flex-direction: column;
-    gap: 20px;
   }
-  .about-section h3 {
-    font-size: 22px;
+  .about-section .intro1 .intro-img ul {
+    margin-bottom: 15px;
   }
-  .about-section .img-block {
+  .about-section .intro1 .intro-img ul li {
+    padding: 8px 5px;
+    font-size: 16px;
+  }
+  .about-section .intro1 .intro-img ul li strong {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .about-section .intro1 .intro-img img {
     width: 100%;
     margin-bottom: 15px;
   }
-  .about-section .text-block {
+  .about-section .h2-1,
+  .about-section .h2-2,
+  .about-section .h2-3 {
+    font-size: 22px;
+    padding: 10px;
+    margin-bottom: 16px;
+  }
+  .about-section .h2-3 {
+    margin: 20px 0;
+  }
+  .about-section .content-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .about-section .img-block {
     width: 90%;
-    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .about-section .img-block h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .about-section .text-block {
+    width: 100%;
+    font-size: 16px;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1024px) and (max-width: 767.98px) {
   .about-section {
     padding: 20px 15px;
+    box-sizing: border-box;
   }
-  .about-section .h2-1,
-  .about-section .h2-2 {
-    font-size: 22px;
-    padding: 10px;
+  .about-section h1 {
+    font-size: 26px;
     margin-bottom: 20px;
   }
-  .about-section .content-flex {
+  .about-section .intro1 p {
+    width: 90%;
+    font-size: 16px;
+    padding: 0 5px;
+  }
+  .about-section .intro1 .intro-img {
     flex-direction: column;
-    gap: 20px;
   }
-  .about-section h3 {
-    font-size: 20px;
+  .about-section .intro1 .intro-img ul {
+    margin-bottom: 15px;
   }
-  .about-section .img-block {
+  .about-section .intro1 .intro-img ul li {
+    padding: 8px 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .about-section .intro1 .intro-img ul li strong {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .about-section .intro1 .intro-img img {
     width: 100%;
     margin-bottom: 15px;
   }
-  .about-section .text-block {
+  .about-section .h2-1,
+  .about-section .h2-2,
+  .about-section .h2-3 {
+    font-size: 22px;
+    padding: 10px;
+    margin-bottom: 16px;
+  }
+  .about-section .h2-3 {
+    margin: 20px 0;
+  }
+  .about-section .content-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .about-section .img-block {
     width: 90%;
+    margin-bottom: 15px;
+  }
+  .about-section .img-block h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .about-section .text-block {
+    width: 100%;
     font-size: 16px;
   }
-  .tabs {
+  .about-section .tabs {
     flex-wrap: wrap;
     gap: 5px;
+    margin: 25px 0 10px 0;
   }
-  .tab-button {
+  .about-section .tab-button {
     flex: 1 1 calc(50% - 5px);
     box-sizing: border-box;
-    padding: 8px 15px;
-    font-size: 16px;
+    padding: 8px 10px;
+    font-size: 15px;
     text-align: center;
   }
-  .tab-content {
+  .about-section .tab-content {
     padding: 15px;
     font-size: 16px;
+    margin-top: 10px;
   }
 }
 .home {
