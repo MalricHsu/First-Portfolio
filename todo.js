@@ -29,6 +29,7 @@ btnTodo.addEventListener("click", () => {
 function displayTask(task) {
   const checkbox = document.createElement("input");
   checkbox.setAttribute("type", "checkbox");
+  checkbox.setAttribute("class", "checkbox");
   checkbox.checked = task.checked;
 
   const span = document.createElement("span");

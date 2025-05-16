@@ -21,7 +21,7 @@
         width: 250px;
         border: 1px solid #ccc;
         border-radius: 10px;
-        font-size: 16px;
+        font-size: 20px;
       }
     }
 
@@ -33,7 +33,7 @@
       border-radius: 10px;
       color: #5c4a3d;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 500;
       transition: background-color 0.3s, transform 0.1s;
     }
@@ -76,20 +76,25 @@
           width: 100%;
           margin-bottom: 5px; // 與時間保持一點間距
 
+          .checkbox {
+            transform: scale(1.5);
+          }
           .task {
-            font-size: 16px;
-            margin-left: 10px;
+            font-size: 20px;
+            margin-left: 12px;
             color: #5c5047;
-            flex-grow: 1; // 讓任務內容佔據剩餘空間
+            max-width: 300px;
           }
 
           .todo-button {
             margin-left: auto;
             display: flex;
+            flex-direction: column;
             gap: 6px;
 
             .btn-edit {
-              padding: 5px 8px;
+              padding: 6px 14px;
+              font-size: 16px;
               background-color: #cbbfa8;
               color: #4e4e4e;
               border: none;
@@ -101,7 +106,8 @@
               }
             }
             .btn-delete {
-              padding: 5px 8px;
+              padding: 6px 14px;
+              font-size: 16px;
               background-color: #d46a6a;
               color: #ffffff;
               border: none;
@@ -113,7 +119,8 @@
               }
             }
             .btn-save {
-              padding: 5px 8px;
+              padding: 6px 14px;
+              font-size: 16px;
               background-color: #bfa46f;
               color: #ffffff;
               border: none;
@@ -130,7 +137,7 @@
             padding: 5px;
             margin-right: 10px;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 18px;
           }
         }
 
@@ -147,11 +154,92 @@
   }
 }
 
-@media (max-width: 767.98px) {
-  .todogroup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+@media (max-width: 767.97px) {
+  .home {
+    .main {
+      padding: 0 16px;
+
+      h2 {
+        font-size: 24px;
+        padding: 24px 0;
+      }
+
+      .todogroup {
+        flex-direction: column;
+        gap: 12px;
+
+        .todo {
+          width: 90%;
+          font-size: 16px;
+        }
+      }
+
+      .btn-todo,
+      .btn-clear {
+        width: 50%;
+        font-size: 16px;
+        padding: 8px 12px;
+      }
+
+      .list {
+        margin: 30px auto;
+        max-width: 100%;
+
+        li {
+          padding: 10px 12px;
+
+          .todo-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            .checkbox {
+              transform: scale(2);
+              margin-left: 20px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              cursor: pointer;
+            }
+            .task {
+              font-size: 18px;
+              margin-left: 18px;
+              margin-bottom: 0;
+              max-width: 300px;
+              word-break: break-word;
+              white-space: normal;
+            }
+
+            .todo-button {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-end;
+
+              gap: 6px;
+
+              .btn-edit,
+              .btn-delete,
+              .btn-save {
+                font-size: 16px;
+                padding: 5px 8px;
+              }
+            }
+
+            .edit-input {
+              width: 100%;
+              margin: 8px 0;
+              font-size: 18px;
+            }
+          }
+
+          .timesetup {
+            font-size: 12px;
+            margin-left: 10px;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
   }
 }

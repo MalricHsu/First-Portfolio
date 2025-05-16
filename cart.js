@@ -1,3 +1,4 @@
+//等整個 HTML 結構載入完成後，再執行括號內的程式碼
 document.addEventListener("DOMContentLoaded", () => {
   renderCart();
 
@@ -17,8 +18,7 @@ function renderCart() {
   let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
   if (cartItems.length === 0) {
-    cartList.innerHTML =
-      "<li class='empty-cart' style='font-size:20px ;font-weight:500'>購物車是空的</li>";
+    cartList.innerHTML = "<li class='empty-cart'>您的購物車是目前是空的</li>";
     totalPriceElement.textContent = "0.00";
     checkOutBtn.disabled = true;
     return;
@@ -33,6 +33,7 @@ function renderCart() {
 
     li.innerHTML = `
       <span class="titleproduct">${item.title}</span>
+      <div class="bills">
       <div class="quantity-control">
         <button class="decrease-btn" data-index="${index}">
           <i class="fa-solid fa-minus"></i>
@@ -46,6 +47,7 @@ function renderCart() {
       <button class="remove-btn" data-index="${index}">
         <i class="fa-solid fa-trash"></i>
       </button>
+      </div>
     `;
 
     cartList.appendChild(li);
