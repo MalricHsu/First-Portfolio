@@ -3,6 +3,9 @@ const btnTodo = document.querySelector(".btn-todo");
 const btnClear = document.querySelector(".btn-clear");
 const list = document.querySelector(".list");
 
+// 頁面載入時載入任務
+window.addEventListener("load", loadTasks);
+
 // 新增任務事件
 btnTodo.addEventListener("click", () => {
   const task = todo.value.trim();
@@ -130,6 +133,3 @@ function loadTasks() {
     });
   }
 }
-
-// 頁面載入時載入任務
-window.addEventListener("load", loadTasks);

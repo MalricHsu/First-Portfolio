@@ -1,7 +1,5 @@
 .about-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 80px;
+  padding: 40px 60px;
 
   h1 {
     font-size: 40px;
@@ -10,8 +8,14 @@
     margin-bottom: 10px;
     color: #8f8678;
   }
+  .p1-0 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #6a7485;
+  }
 
-  p {
+  .p1-1 {
     text-align: center;
     margin-bottom: 20px;
     color: #6a7485;
@@ -26,7 +30,8 @@
       font-size: 18px;
       margin-bottom: 20px;
       font-weight: 400;
-      color: #5a5562; // 藍紫灰
+      color: #5a5562;
+      text-align: left;
     }
     .intro-img {
       display: flex;
@@ -45,13 +50,13 @@
             color: #5c5047;
             text-decoration: none;
             padding: 8px 12px 8px 0px;
-            border-radius: 6px; /* 可選，讓背景有圓角 */
+            border-radius: 6px;
             transition: background-color 0.2s ease, color 0.2s ease;
           }
 
           a:hover {
-            background-color: #f0eae5; /* 自訂一個淡色背景 */
-            color: #3e362f; /* 字色也可稍微變深 */
+            background-color: #f0eae5;
+            color: #3e362f;
           }
         }
       }
@@ -109,6 +114,12 @@
     font-size: 18px;
     line-height: 1.5;
     color: #333;
+
+    .p1-2 {
+      text-align: left;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
   }
 
   .tabs {
